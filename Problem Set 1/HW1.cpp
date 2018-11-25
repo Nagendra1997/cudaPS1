@@ -77,7 +77,7 @@ void cleanup()
 
 void generateReferenceImage(std::string input_filename, std::string output_filename)
 {
-  cv::Mat reference = cv::imread(std::input_filename, cv::CV_LOAD_IMAGE_GRAYSCALE );
+  cv::Mat reference = cv::imread(std::string input_filename, cv::CV_LOAD_IMAGE_GRAYSCALE );
 
   cv::imwrite(output_filename, reference);
 
