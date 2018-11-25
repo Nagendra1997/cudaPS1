@@ -6,7 +6,7 @@ NVCC=nvcc
 ###################################
 
 OPENCV_LIBPATH=/usr/lib
-OPENCV_INCLUDEPATH=/usr/include/opencv4
+OPENCV_INCLUDEPATH=/usr/local/include/opencv4
 
 ###################################################
 # On Macs the default install locations are below #
