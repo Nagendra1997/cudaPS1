@@ -59,7 +59,7 @@ globalIdx=(blockId*threadsPerBlock)+threadIdx.x +(gridDim.x*threadIdx.y);
 
 uchar4 rgba=rgbaImage[globalIdx];
 greyImage[globalIdx]=.299f *rgba.x + .587f * rgba.y + .114f *rgba.z;
-cudaDeviceSynchronize();
+
 
 }
 
@@ -72,6 +72,6 @@ void your_rgba_to_greyscale(const uchar4 * const h_rgbaImage, uchar4 * const d_r
   const dim3 gridSize(numCols, 1, 1);  //TODO
   rgba_to_greyscale<<<gridSize, blockSize>>>(d_rgbaImage, d_greyImage, numRows, numCols);
   
-  cudaDeviceSynchronize(); checkCudaErrors(cudaGetLastError());
+  checkCudaErrors(cudaGetLastError());
 
 }
