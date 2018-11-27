@@ -32,6 +32,7 @@ void preProcess(uchar4 **inputImage, unsigned char **greyImage,
     std::cerr << "Couldn't open file: " << filename << std::endl;
     exit(1);
   }
+  else printf("Success");
 
   cv::cvtColor(image, imageRGBA, cv::COLOR_BGR2GRAY);
 
