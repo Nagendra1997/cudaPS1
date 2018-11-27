@@ -28,12 +28,12 @@ void preProcess(uchar4 **inputImage, unsigned char **greyImage,
 
   cv::Mat image;
   image = cv::imread(filename.c_str(), cv::IMREAD_COLOR);
-  
+
   if (image.empty()) {
     std::cerr << "Couldn't open file: " << filename << std::endl;
     exit(1);
   }
-  else std::cout << "scuk it" << std::endl;
+  
 
   cv::cvtColor(image, imageRGBA, cv::COLOR_BGR2GRAY);
 
@@ -51,6 +51,7 @@ void preProcess(uchar4 **inputImage, unsigned char **greyImage,
   *greyImage  = imageGrey.ptr<unsigned char>(0);
 
   const size_t numPixels = numRows() * numCols();
+  std::cout << "scuk it" << std::endl;
   //allocate memory on the device for both input and output
   checkCudaErrors(cudaMalloc(d_rgbaImage, sizeof(uchar4) * numPixels));
   checkCudaErrors(cudaMalloc(d_greyImage, sizeof(unsigned char) * numPixels));
