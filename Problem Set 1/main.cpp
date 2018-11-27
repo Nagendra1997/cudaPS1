@@ -19,6 +19,7 @@ void your_rgba_to_greyscale(const uchar4 * const h_rgbaImage,
 int main(int argc, char **argv) {
   uchar4        *h_rgbaImage, *d_rgbaImage;
   unsigned char *h_greyImage, *d_greyImage;
+  
 
   std::string input_file;
   std::string output_file;
@@ -26,7 +27,7 @@ int main(int argc, char **argv) {
   double perPixelError = 0.0;
   double globalError   = 0.0;
   bool useEpsCheck = false;
-  printf("Suck it up!");
+  std::cerr << "scuk it" << std::endl;
   switch (argc)
   {
 	case 2:
