@@ -34,12 +34,13 @@ int main(int argc, char **argv) {
 	  input_file = std::string(argv[1]);
 	  output_file = "HW1_output.png";
 	  reference_file = "HW1_reference.png";
-	  std::cout << "scuk it" << std::endl;
+	  
 	  break;
 	case 3:
 	  input_file  = std::string(argv[1]);
       output_file = std::string(argv[2]);
 	  reference_file = "HW1_reference.png";
+	  std::cout << "scuk it" << std::endl;
 	  break;
 	case 4:
 	  input_file  = std::string(argv[1]);
