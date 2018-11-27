@@ -40,7 +40,6 @@ int main(int argc, char **argv) {
 	  input_file  = std::string(argv[1]);
       output_file = std::string(argv[2]);
 	  reference_file = "HW1_reference.png";
-	  std::cout << "scuk it" << std::endl;
 	  break;
 	case 4:
 	  input_file  = std::string(argv[1]);
@@ -70,7 +69,7 @@ int main(int argc, char **argv) {
   cudaDeviceSynchronize(); checkCudaErrors(cudaGetLastError());
 
   int err = printf("Your code ran in: %f msecs.\n", timer.Elapsed());
-
+  	std::cout << "scuk it" << std::endl;
   if (err < 0) {
     //Couldn't print! Probably the student closed stdout - bad news
     std::cerr << "Couldn't print timing information! STDOUT Closed!" << std::endl;
