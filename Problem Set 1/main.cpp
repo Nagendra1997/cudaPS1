@@ -26,6 +26,7 @@ int main(int argc, char **argv) {
   double perPixelError = 0.0;
   double globalError   = 0.0;
   bool useEpsCheck = false;
+  printf("Suck it up!");
   switch (argc)
   {
 	case 2:
