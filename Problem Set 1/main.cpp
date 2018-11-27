@@ -27,14 +27,14 @@ int main(int argc, char **argv) {
   double perPixelError = 0.0;
   double globalError   = 0.0;
   bool useEpsCheck = false;
-  std::cout << "scuk it" << std::endl;
+  
   switch (argc)
   {
 	case 2:
 	  input_file = std::string(argv[1]);
 	  output_file = "HW1_output.png";
 	  reference_file = "HW1_reference.png";
-	  printf("Coool!!!");
+	  std::cout << "scuk it" << std::endl;
 	  break;
 	case 3:
 	  input_file  = std::string(argv[1]);
