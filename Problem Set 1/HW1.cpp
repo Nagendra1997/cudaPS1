@@ -59,11 +59,12 @@ void preProcess(uchar4 **inputImage, unsigned char **greyImage,
   cudaDeviceSynchronize();checkCudaErrors(cudaGetLastError());
   
 
+  std::cout << "scukkkkkkkkkk it" << std::endl;
   
   //copy input array to the GPU
   checkCudaErrors(cudaMemcpy(*d_rgbaImage, *inputImage, sizeof(uchar4) * numPixels, cudaMemcpyHostToDevice));
  cudaDeviceSynchronize();checkCudaErrors(cudaGetLastError());
- std::cout << "scukkkkkkkkkk it" << std::endl;
+ 
   d_rgbaImage__ = *d_rgbaImage;
   d_greyImage__ = *d_greyImage;
 
