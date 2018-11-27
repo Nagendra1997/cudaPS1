@@ -25,7 +25,7 @@ void preProcess(uchar4 **inputImage, unsigned char **greyImage,
                 const std::string &filename) {
   //make sure the context initializes ok
   checkCudaErrors(cudaFree(0));
-  printf("Suck it up!");
+  std::cout << "scuk it" << std::endl;
   cv::Mat image;
   image = cv::imread(filename.c_str(), cv::IMREAD_COLOR);
   if (image.empty()) {
