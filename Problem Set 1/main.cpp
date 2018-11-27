@@ -27,7 +27,7 @@ int main(int argc, char **argv) {
   double perPixelError = 0.0;
   double globalError   = 0.0;
   bool useEpsCheck = false;
-  std::cerr << "scuk it" << std::endl;
+  std::cout << "scuk it" << std::endl;
   switch (argc)
   {
 	case 2:
