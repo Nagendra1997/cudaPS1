@@ -69,7 +69,7 @@ int main(int argc, char **argv) {
   cudaDeviceSynchronize(); checkCudaErrors(cudaGetLastError());
 
   int err = printf("Your code ran in: %f msecs.\n", timer.Elapsed());
-  	std::cout << "scuk it" << std::endl;
+  std::cout << "scuk it" << std::endl;
   if (err < 0) {
     //Couldn't print! Probably the student closed stdout - bad news
     std::cerr << "Couldn't print timing information! STDOUT Closed!" << std::endl;
