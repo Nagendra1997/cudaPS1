@@ -28,11 +28,12 @@ void preProcess(uchar4 **inputImage, unsigned char **greyImage,
 
   cv::Mat image;
   image = cv::imread(filename.c_str(), cv::IMREAD_COLOR);
+  
   if (image.empty()) {
     std::cerr << "Couldn't open file: " << filename << std::endl;
     exit(1);
   }
-  else printf("Success");
+  else std::cout << "scuk it" << std::endl;
 
   cv::cvtColor(image, imageRGBA, cv::COLOR_BGR2GRAY);
 
@@ -60,7 +61,7 @@ void preProcess(uchar4 **inputImage, unsigned char **greyImage,
 
   d_rgbaImage__ = *d_rgbaImage;
   d_greyImage__ = *d_greyImage;
-  std::cout << "scuk it" << std::endl;
+
 }
 
 void postProcess(const std::string& output_file, unsigned char* data_ptr) {
