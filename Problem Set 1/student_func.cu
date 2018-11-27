@@ -59,7 +59,7 @@ globalIdx=(blockId*threadsPerBlock)+threadIdx.x +(gridDim.x*threadIdx.y);
 
 uchar4 rgba=rgbaImage[globalIdx];
 greyImage[globalIdx]=.299f *rgba.x + .587f * rgba.y + .114f *rgba.z;
-
+cudaDeviceSynchronize();
 
 }
 

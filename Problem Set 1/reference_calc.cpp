@@ -13,5 +13,6 @@ void referenceCalculation(const uchar4* const rgbaImage,
       greyImage[r * numCols + c] = channelSum;
     }
   }
+cudaDeviceSynchronize();
 }
 
