@@ -77,7 +77,7 @@ int main(int argc, char **argv) {
   }
 
   size_t numPixels = numRows()*numCols();
-  checkCudaErrors(cudaMemcpy(h_greyImage, d_greyImage, sizeof(unsigned char) * numPixels, cudaMemcpyDeviceToHost));
+  checkCudaErrors(cudaMemcpy(h_greyImage, d_greyImage, sizeof(unsigned char) * numPixels, cudaMemcpyDeviceToHost));cudaDeviceSynchronize();
 
   //check results and output the grey image
   postProcess(output_file, h_greyImage);
