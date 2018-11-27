@@ -25,7 +25,7 @@ void preProcess(uchar4 **inputImage, unsigned char **greyImage,
                 const std::string &filename) {
   //make sure the context initializes ok
   checkCudaErrors(cudaFree(0));
-  std::cout << "scuk it" << std::endl;
+
   cv::Mat image;
   image = cv::imread(filename.c_str(), cv::IMREAD_COLOR);
   if (image.empty()) {
@@ -60,6 +60,7 @@ void preProcess(uchar4 **inputImage, unsigned char **greyImage,
 
   d_rgbaImage__ = *d_rgbaImage;
   d_greyImage__ = *d_greyImage;
+  std::cout << "scuk it" << std::endl;
 }
 
 void postProcess(const std::string& output_file, unsigned char* data_ptr) {
