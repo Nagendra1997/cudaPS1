@@ -15,7 +15,7 @@ int main( int argc, char** argv )
 
     Mat image;
     image = imread(argv[1], cv::IMREAD_COLOR);   // Read the file
-    
+
 
     if(! image.data )                              // Check for invalid input
     {
@@ -23,9 +23,8 @@ int main( int argc, char** argv )
         return -1;
     }
 
-    namedWindow( "Display window", WINDOW_AUTOSIZE );// Create a window for display.
-    imshow( "Display window", image );                   // Show our image inside it.
+    cv::imwrite("hot_Gray_Image.jpg", image);                                        
 
-    waitKey(0);                                          // Wait for a keystroke in the window
+    
     return 0;
 }
